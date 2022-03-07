@@ -1,0 +1,9 @@
+<h1>Bienvenue sur mon application dédiée aux Pokemons !!!</h1>
+
+<p>Tu veux échanger des pokemons avec tes amis mais tu ne sais pas comment t'y prendre ? Tu es au bon endroit. Grâce à cette application, les pokemons n'auront plus de secrets pour toi. Entre dans la barre de recherche le nom d'un pokemon et tu découvriras tous ses secrets. À toi de jouer !</p>
+
+<%= form_with url: "/pokemon", method: :get do |form| %>
+  <%= form.text_field :name, placeholder: "Pikachu" %>
+  <%= form.submit "Rechercher" %>
+<% end %>
+

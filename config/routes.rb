@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get "/pokemons/:name", to: "pokemons#show"
+  root "pokemons#index"
+
+  get "/pokemon", to: "pokemons#show"
 end

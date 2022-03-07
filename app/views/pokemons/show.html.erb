@@ -1,1 +1,10 @@
-<p><%= @pokemon %></p>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<a href=<%= root_path %>>Retour à l'accueil</a>
+
+<% if @pokemon %>
+  <p>Voici toutes les informations sur ton pokemon :</p>
+  <p><%= @pokemon %></p>
+<% end %>
