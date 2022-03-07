@@ -1,4 +1,4 @@
-module Poke::API
+module Poke::Api
   def self.fetch(params)
     url = "https://pokeapi.co/api/v2/pokemon/#{params}"
     response = Faraday.get(url)
