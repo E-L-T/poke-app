@@ -5,6 +5,8 @@
   <a class='' href=<%= root_path %>>Retour à l'accueil</a>
   <% if @pokemon %>
     <p class='mt-3'>Voici toutes les informations sur ton pokemon :</p>
-    <samp><%= @pokemon %></samp>
+    <pre>
+      <span id='pokemon-data-field' data-pokemon=<%= @pokemon.to_json %>></span>
+    </pre>
   <% end %>
 </div>
