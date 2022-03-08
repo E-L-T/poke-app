@@ -1,9 +1,13 @@
-<h1>Bienvenue sur mon application dédiée aux Pokemons !!!</h1>
+<div class='container col-md-4 offset-md-4 mt-5'>
+  <h1 class='text-center'>Bienvenue sur la PokéApp !</h1>
 
-<p>Tu veux échanger des pokemons avec tes amis mais tu ne sais pas comment t'y prendre ? Tu es au bon endroit. Grâce à cette application, les pokemons n'auront plus de secrets pour toi. Entre dans la barre de recherche le nom d'un pokemon et tu découvriras tous ses secrets. À toi de jouer !</p>
-
-<%= form_with url: "/pokemon", method: :get do |form| %>
-  <%= form.text_field :name, placeholder: "Pikachu" %>
-  <%= form.submit "Rechercher" %>
-<% end %>
-
+  <p class='mt-5 mb-5'>Tu veux échanger des Pokémons avec tes amis et tu aimerais connaître tous leurs points forts ? Tu es au bon endroit. Grâce à la PokéApp, ces petits monstres n'auront bientôt plus de secrets pour toi. Entre dans la barre de recherche le nom d'un Pokémon et tu découvriras toutes ses caractéristiques. Voici quelques noms pour t'inspirer : Bulbasaur, Metapod, Charizard ou Rattata... À toi de jouer !</p>
+  <%= form_with url: "/pokemon", method: :get, class: 'row' do |form| %>
+    <div class='col-sm-8'>
+      <%= form.text_field :name, class: "form-control", placeholder: "Pikachu" %>
+    </div>
+    <div class='col-sm-4'>
+      <%= form.submit "Rechercher", class: "btn btn-info" %>
+    </div>
+  <% end %>
+</div>

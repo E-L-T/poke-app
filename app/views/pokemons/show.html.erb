@@ -1,10 +1,10 @@
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
-
-<a href=<%= root_path %>>Retour à l'accueil</a>
-
-<% if @pokemon %>
-  <p>Voici toutes les informations sur ton pokemon :</p>
-  <p><%= @pokemon %></p>
-<% end %>
+<div class='container col-md-6 offset-md-3 mt-3'>
+  <% if flash[:notice] %>
+    <p class="bg-warning text-center"><%= flash[:notice] %></p>
+  <% end %>
+  <a class='' href=<%= root_path %>>Retour à l'accueil</a>
+  <% if @pokemon %>
+    <p class='mt-3'>Voici toutes les informations sur ton pokemon :</p>
+    <samp><%= @pokemon %></samp>
+  <% end %>
+</div>
