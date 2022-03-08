@@ -1,4 +1,7 @@
 <div class='container col-md-4 offset-md-4 mt-5'>
+  <% if flash[:notice] %>
+    <p class="bg-warning text-center"><%= flash[:notice] %></p>
+  <% end %>
   <h1 class='text-center'>Bienvenue sur la PokéApp !</h1>
 
   <p class='mt-5 mb-5'>Tu veux échanger des Pokémons avec tes amis et tu aimerais connaître tous leurs points forts ? Tu es au bon endroit. Grâce à la PokéApp, ces petits monstres n'auront bientôt plus de secrets pour toi. Entre dans la barre de recherche le nom d'un Pokémon et tu découvriras toutes ses caractéristiques. Voici quelques noms pour t'inspirer : Bulbasaur, Metapod, Charizard ou Rattata... À toi de jouer !</p>
