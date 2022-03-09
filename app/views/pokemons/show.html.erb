@@ -1,12 +1,12 @@
-<div class='container col-md-6 offset-md-3 mt-3'>
+<div class='container col-md-8 offset-md-2 mt-3'>
   <% if flash[:notice] %>
-    <p class="bg-warning text-center"><%= flash[:notice] %></p>
+    <p class="alert alert-warning  text-center"><%= flash[:notice] %></p>
   <% end %>
   <a class='' href=<%= root_path %>>Retour à l'accueil</a>
   <% if @pokemon %>
     <p class='mt-3'>Voici toutes les informations sur ton pokemon :</p>
-    <pre>
-      <span id='pokemon-data-field' data-pokemon=<%= @pokemon.to_json %>></span>
+    <pre class='card'>
+      <span class= 'card-body' id='pokemon-data-field' data-pokemon=<%= @pokemon.to_json %>></span>
     </pre>
   <% end %>
 </div>
